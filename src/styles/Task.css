@@ -1,0 +1,49 @@
+.task{
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #386dbd;
+    display: flex;
+    justify-content: space-between;
+}
+.task i{
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #009ddd;
+    border-radius: 50%;
+}
+.task i:hover{
+box-shadow: 0px 0px 10px .5px rgba(93, 209, 255, 0.28);
+background-color: #009ddd;
+color: #0f4571;
+}
+
+.task .p{
+    max-width: 300px;
+    word-break:break-all;
+}
+
+.task .editTask{
+    color: #fff;
+    width:100%;
+    overflow: hidden;
+    resize:none;
+    height: 200px;
+    word-wrap: break-word;
+    outline: none;
+    background-color: #0f4571;
+    border:1px solid #009ddd;
+}
+
+.task>.saveIcon{
+    display: flex;
+    align-items: center;
+}
+
+.task .saveIcon{
+    padding: 10px;
+}
+
+.hidden{
+    overflow: hidden;
+    max-height: 20px;
+}

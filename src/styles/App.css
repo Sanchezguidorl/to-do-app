@@ -1,0 +1,20 @@
+*{
+    letter-spacing: .2rem;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto,Calibri;
+}
+
+input{
+    border: none;
+}
+
+.App{
+    min-height: 100vh;
+    background-color:#3a3132;
+    color: #fff;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}

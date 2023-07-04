@@ -1,0 +1,33 @@
+.form input{
+  color: #3a3132;
+  width: 68%;
+  height: 30px;
+}
+
+.form button{
+    border: none;
+    width: 30%;
+    height: 30px;
+    cursor: pointer;
+    background-color: #386dbd;
+    color: wheat;
+    box-shadow: 0px 0px 10px 1px rgba(93,209,255,0.40);
+    border-radius: 5px;
+    transition: 1s ease;
+  }
+
+  .form button:hover{
+  background-color: #009ddd;
+  color: #fff;
+  }
+
+form button:disabled{
+  color: rgba(245, 222, 179, 0.651);
+  box-shadow: none;
+  background-color: #275dad;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+}
