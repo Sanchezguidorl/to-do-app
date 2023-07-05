@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import '../styles/Task.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil, faCircleXmark, faFloppyDisk } from '@fortawesome/free-solid-svg-icons'
+import { faPencil, faCircleCheck, faFloppyDisk } from '@fortawesome/free-solid-svg-icons'
 
 function Task ({ task, deleteTask, saveTask, editing, isEditing, hidden, removeHidden }) {
   const [taskEdit, setTaskEdit] = useState('')
   // Iconos de la interfaz
   const editIcon = <FontAwesomeIcon icon={faPencil} />
-  const deleteIcon = <FontAwesomeIcon icon={faCircleXmark} />
+  const checkIcon = <FontAwesomeIcon icon={faCircleCheck} />
   const saveIcon = <FontAwesomeIcon icon={faFloppyDisk} />
 
   // Función para auditar cambios en el textarea
@@ -33,7 +33,7 @@ function Task ({ task, deleteTask, saveTask, editing, isEditing, hidden, removeH
             <p id='taskText' className={hidden ? 'hidden' : ''} onClick={() => removeHidden(task.id)} >{task.name}</p>
             <div>
               <i className='iconEdit' onClick={() => { editing(task.id); getTask() }} >{editIcon}</i>
-              <i onClick={() => deleteTask(task.id)} >{deleteIcon}</i>
+              <i onClick={() => deleteTask(task.id)} >{checkIcon}</i>
             </div>
           </div>
           : <div className='task'>
