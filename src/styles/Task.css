@@ -1,4 +1,6 @@
 .task{
+    margin-bottom: 10px;
+    width: 100%;
     cursor: pointer;
     padding: 10px 0;
     border-bottom: 1px solid #386dbd;
@@ -17,15 +19,10 @@ background-color: #009ddd;
 color: #0f4571;
 }
 
-.task .p{
-    max-width: 300px;
-    word-break:break-all;
-}
-
 .task .editTask{
+    transition: 1s ease-in;
     color: #fff;
-    width:100%;
-    overflow: hidden;
+    width:320px;
     resize:none;
     height: 200px;
     word-wrap: break-word;
@@ -35,12 +32,16 @@ color: #0f4571;
 }
 
 .task>.saveIcon{
+    padding: 0 10px;
+    width: auto;
     display: flex;
     align-items: center;
 }
 
-.task .saveIcon{
-    padding: 10px;
+
+#taskText{
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .hidden{

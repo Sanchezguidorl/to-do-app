@@ -1,6 +1,6 @@
 .container{
     min-height: 60vh;
-    min-width: 350px;
+    width: 376px;
     background-color:#0f4571;
     padding: 40px 30px 30px 30px;
     border: 3px solid wheat;
@@ -8,4 +8,39 @@
 }
 .container h2{
     text-align: center;
+    text-decoration:underline;
+    padding-bottom: 20px;
+    border-bottom: 1px solid wheat;
+    margin-bottom: 1rem;
+}
+
+.container h2, .container button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;    
+
+}
+.container .addIcon{
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    opacity: 0.3;
+}
+
+.container .centerEmpty{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ .container .addIcon i{
+    margin-top: 30px;
+    background-color: #4884dd91;
+    border-radius: 10%;
+    padding: 4.5rem;
+    text-align: center;
+    font-size: 2rem;
 }
