@@ -1,13 +1,20 @@
 .task{
     margin-bottom: 10px;
     width: 100%;
-    cursor: pointer;
     padding: 10px 0;
     border-bottom: 1px solid #386dbd;
     display: flex;
     justify-content: space-between;
 }
-.task i{
+.task .icons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons-container i{
+    height: 20px;
+    cursor: pointer;
     margin-left: 10px;
     padding: 5px;
     border: 1px solid #009ddd;
@@ -19,29 +26,63 @@ background-color: #009ddd;
 color: #0f4571;
 }
 
-.task .editTask{
+.task-edit{
+    margin: 10px;
+    width: 366px;
+    height: 200px;
+    padding: 20px 0;
+    border-bottom: 1px solid #386dbd;
+}
+
+.edit-container{
+    display: flex;
+    justify-content:start;
+}
+
+.task-edit p{
+    margin-top: 5px;
+    color: rgb(173, 36, 36);
+    font-size: 11px;
+    letter-spacing: 2px;
+   font-family: Helvetica, sans-serif;
+}
+
+.editTask{
+    padding: 0 5px;
     transition: 1s ease-in;
     color: #fff;
     width:320px;
     resize:none;
-    height: 200px;
+    height: 180px;
     word-wrap: break-word;
     outline: none;
     background-color: #0f4571;
     border:1px solid #009ddd;
 }
 
-.task>.saveIcon{
-    padding: 0 10px;
+.saveIcon{
     width: auto;
     display: flex;
     align-items: center;
 }
 
+.iconEdit{
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.iconEdit:hover{
+    background-color: #009ddd;
+}
 
 #taskText{
-    max-width: 250px;
+    cursor: help;
+    max-width: 300px;
     word-wrap: break-word;
+    word-break: break-all;
 }
 
 .hidden{

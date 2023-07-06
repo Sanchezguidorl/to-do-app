@@ -10,6 +10,7 @@ function Task ({ task, deleteTask, saveTask, editing, isEditing, hidden, removeH
   const editIcon = <FontAwesomeIcon icon={faPencil} />
   const checkIcon = <FontAwesomeIcon icon={faCircleCheck} />
   const saveIcon = <FontAwesomeIcon icon={faFloppyDisk} />
+  const [error, setError] = useState(false)
 
   // Función para auditar cambios en el textarea
   const handleChange = (e) => {
@@ -31,22 +32,28 @@ function Task ({ task, deleteTask, saveTask, editing, isEditing, hidden, removeH
         !isEditing
           ? <div className='task'>
             <p id='taskText' className={hidden ? 'hidden' : ''} onClick={() => removeHidden(task.id)} >{task.name}</p>
-            <div>
-              <i className='iconEdit' onClick={() => { editing(task.id); getTask() }} >{editIcon}</i>
+            <div className='icons-container'>
+              <i onClick={() => { editing(task.id); getTask() }} >{editIcon}</i>
               <i onClick={() => deleteTask(task.id)} >{checkIcon}</i>
             </div>
           </div>
-          : <div className='task'>
+          : <div className='task-edit'>
+            <div className='edit-container'>
             <textarea className='editTask' onChange={handleChange} value={taskEdit.name}></textarea>
             <div className='saveIcon'>
               <i className='iconEdit' onClick={() => {
                 if (taskEdit.name.length > 10) {
                   editing()
                   saveTask(taskEdit)
+                  setError(false)
+                } else {
+                  setError(true)
                 }
               }
                 } >{saveIcon}</i>
             </div>
+            </div>
+           {error && taskEdit.name.length < 10 ? <p>La tarea debe tener un minimo de 10 caracteres</p> : ''}
           </div>
 
       }
